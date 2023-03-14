@@ -12,7 +12,7 @@ pipeline{
                 sh ("tarraform init")
             }
         }
-        stage("Terrafrom action") {
+        stage("Terrafrom apply") {
             steps{
                 sh ("terraform apply--auto-approve");
             }
