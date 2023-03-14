@@ -12,9 +12,10 @@ pipeline{
                 sh ("tarraform init")
             }
         }
-        stage("Terrafrom apply") {
+        stage("Terraform apply") {
             steps{
-                sh ("terraform apply--auto-approve");
+                echo "terraform action from the parameter is --> $(action)"
+                sh ("terraform $(action) --auto-approve");
             }
         }
 
