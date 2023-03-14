@@ -2,9 +2,10 @@ pipeline{
     agent any
 
     stages {
-        stage('git clone') {
+        stage('checkout') {
             steps{
-                git ''
+                git 'https://github.com/ranjithk9/terrafrom.git'
+                
             }
         }
         stage("Terraform init") {
